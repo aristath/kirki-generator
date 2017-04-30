@@ -3,10 +3,6 @@
 // Include the main generator class.
 include_once 'kirki-generator.php';
 
-add_action( 'wp_enqueue_scripts', function() {
-	// wp_enqueue_style( 'kirki-generator', get_stylesheet_uri() );
-});
-
 define( 'KIRKI_GENERATOR_POPULARITY_THRESHOLD', 0.8 );
 /**
  * Return the top 75% items in popularity.
