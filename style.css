@@ -651,12 +651,21 @@ embed, iframe, object {
 
 body {
     font-size: 18px;
+    background: #272822;
+    color: #fff;
+    font-family: 'Rokkitt', serif;
+    font-weight: 400;
+    padding-bottom: 3em;
 }
 
-header {
-    padding: 1em 5%;
+.page-header {
+    padding: 2em 5%;
     text-align: center;
-    background: #e65100;
+    color: #fff;
+    font-size: 1.5em;
+    background-size: cover;
+    min-height: 70vh;
+    font-weight: 700;
 }
 
 body.generating-kirki-build {
@@ -690,18 +699,18 @@ body.generating-kirki-build {
     margin-right: 1em;
 }
 
-.form-wrapper>.field-types {
-    background-color: #eceff1;
-}
+.form-wrapper>.field-types {}
 
-.form-wrapper>.modules {
-    background-color: #cfd8dc;
+.form-wrapper>.modules {}
+
+.buttons-wrapper {
+    margin-top: 2em;
 }
 
 .buttons-wrapper a {
     text-decoration: none;
-    color: #fff;
-    background-color: #f57c00;
+    color: #272822;
+    background-color: #A6E22E;
     padding: 1em 2em;
     border-radius: 3px;
     display: block;
@@ -711,5 +720,28 @@ body.generating-kirki-build {
 }
 
 .buttons-wrapper #download-build {
-    background-color: #e65100;
+    background-color: #F92672;
+    display: none;
+    color: #fff;
 }
+
+body.kirki-build-complete #submit-me {
+    display: none;
+}
+
+body.kirki-build-complete #download-build {
+    display: block;
+}
+
+.info-wrapper-2 {
+    display: none;
+}
+
+body.kirki-build-complete .info-wrapper-1 {
+    display: none;
+}
+body.kirki-build-complete .info-wrapper-2 {
+    display: block;
+}
+
+h3 {color:#FD971F}

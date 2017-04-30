@@ -78,6 +78,7 @@ jQuery( document ).ready( function() {
 			console.log( response );
 			// Remove the class from the body.
 			jQuery( 'body' ).removeClass( 'generating-kirki-build' );
+			jQuery( 'body' ).addClass( 'kirki-build-complete' );
 
 			// Change the submit link to download link.
 			jQuery( '#download-build' ).attr( 'href', response.downloadURL );

@@ -67,7 +67,7 @@ class Kirki_Generator {
 	 */
 	public function enqueue_scripts() {
 
-		wp_enqueue_script( 'kirki-generator', get_template_directory_uri() . '/script.js', array( 'wp-util', 'underscore', 'backbone' ) );
+		wp_enqueue_script( 'kirki-generator', get_template_directory_uri() . '/assets/js/script.js', array( 'wp-util', 'underscore', 'backbone' ) );
 		wp_localize_script( 'kirki-generator', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
 
 	}

@@ -4,6 +4,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+	<link href="https://fonts.googleapis.com/css?family=Rokkitt:300,400,700" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -12,14 +13,23 @@
 	<?php $field_types = kirki_generator_get_all_fields(); ?>
 	<?php $modules     = kirki_generator_get_all_modules(); ?>
 
-	<header>
-		Create custom builds for the Kirki WordPress plugin.
+	<header class="page-header" style="background:url(<?php echo esc_url_raw( get_template_directory_uri() . '/assets/images/markus-spiske-109588-min.jpg' ); ?>)">
+		<h1><?php esc_attr_e( 'Create custom builds for the Kirki WordPress plugin.', 'kirki-generator' ); ?></h1>
+		<p><?php esc_attr_e( 'Choose the options below to generate a customized Kirki build to embed in your theme.', 'kirki-generator' ); ?></p>
 	</header>
 
 	<div class="form-wrapper">
 		
 		<div class="info">
-			<?php esc_attr_e( 'Select the fields and modules you want to include in your project. Initial selections reflect the most used options and are updated automatically.', 'kirki-generator' ); ?>
+			<h3><?php esc_attr_e( 'What is this?', 'kirki-generator' ); ?></h3>
+			<div class="info-wrapper-1">
+				<p><?php esc_attr_e( 'Select the fields and modules you want to include in your project and then click on the button below to generate your custom build.', 'kirki-generator' ); ?></p>
+				<p><?php esc_attr_e( 'Initial selections reflect the most used options and are updated automatically.', 'kirki-generator' ); ?></p>
+			</div>
+			<div class="info-wrapper-2">
+				<p><?php esc_attr_e( 'Refresh the page to build another package', 'kirki-generator' ); ?></p>
+			</div>
+					
 			<div class="buttons-wrapper">
 				<a href="#" id="submit-me"><?php esc_attr_e( 'Generate Custom Build', 'kirki-generator' ); ?></a>
 				<a href="#" id="download-build"><?php esc_attr_e( 'Download Custom Build', 'kirki-generator' ); ?></a>
